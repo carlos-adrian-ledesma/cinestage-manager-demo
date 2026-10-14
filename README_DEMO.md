@@ -1,23 +1,40 @@
-# CineStage Manager — Edición DEMO
+# CineStage Manager — Guía de la DEMO
 
-**Versión:** 2.0.0-rc1 · **Uso:** evaluación comercial sin vencimiento.
+**Versión actual:** 2.1.0-RC1 · **Estado:** demostración pública / evaluación.
 
-La DEMO se distribuye separada del código FULL. Incluye información ficticia y funcionalidades representativas: dashboard con calendario real, consulta y edición de clientes, producciones, guiones (fichas), elenco, agenda y movimientos financieros de muestra.
+Esta edición permite explorar una muestra funcional de CineStage Manager utilizando datos ficticios y una base SQLite independiente de PRIVATE/FULL.
 
-## Cómo ejecutar
-En Windows con Python 3.11+ instalado: `run_demo_windows.bat`.
-También: `python demo_launcher.py` desde la carpeta del paquete.
+## Requisitos y ejecución
 
-La DEMO requiere solamente la biblioteca estándar Python (Tkinter incluido en la instalación habitual). No necesita Internet ni cuentas.
+- Windows con Python 3.11 o superior y Tkinter.
+- Ejecutar `INSTALAR_DEMO.bat` para inicializar el entorno.
+- Abrir `run_demo_windows.bat`.
+- Si no abre, ejecutar `run_demo_debug_windows.bat`.
+- Alternativamente: `python demo_launcher.py`.
 
-La base se genera automáticamente bajo `Documentos/CineStageManager_DEMO/demonstracion.db`. Podés borrar y regenerar los ejemplos mediante **Restablecer demostración**.
+El sistema guarda sus datos ficticios en `Documentos/CineStageManager_DEMO/` y permite restablecerlos desde la aplicación.
 
-## Límites de evaluación
-5 producciones, 10 clientes, 3 fichas de guion, 15 integrantes, 20 actividades y 15 movimientos financieros. Exportaciones reales y restauración de respaldos privados no se ofrecen.
+## Funciones disponibles
 
-Importante: el editor completo de guiones, los informes PDF/DOCX/XLSX, los asientos teatrales y multimedia se muestran en la edición PRIVATE, **no** en esta DEMO simplificada. La DEMO utiliza su propia interfaz evaluativa, manteniendo componentes comunes de calendario y estilo visual.
+Dashboard, calendario mensual, producciones, clientes, fichas básicas de guiones, elenco/equipo, agenda y registros financieros de muestra.
 
-El código Python de la DEMO distribuido sin compilar es accesible al destinatario; los límites no constituyen DRM fuerte. Para distribución comercial habitual compilar `demo_launcher.py` en Windows y revisar términos de terceros.
+Los límites actuales son: 5 producciones, 10 clientes, 3 fichas de guion, 15 integrantes, 20 actividades y 15 movimientos financieros.
 
-## Inicio y diagnóstico V2.0.2
-La DEMO muestra una alerta si falla su apertura y registra detalles en `%TEMP%\CineStageManager_DEMO\inicio_error.log`.
+## Funciones exclusivas de FULL
+
+La edición privada incluye funcionalidades no disponibles en esta DEMO simplificada, como editor completo de guiones, multimedia, gestión teatral de asientos, respaldos y exportaciones avanzadas.
+
+La versión DEMO no contiene la carpeta `app/` ni el código fuente PRIVATE/FULL.
+
+## Alcance y seguridad
+
+- Todos los datos iniciales son ficticios.
+- No se requieren credenciales ni acceso a Internet.
+- La edición DEMO distribuye su código Python necesario para funcionar; no constituye una protección anticopia invulnerable.
+- No introducir datos personales reales durante una evaluación pública.
+
+## Estado de validación
+
+La versión se identifica como RC1 (release candidate). Las pruebas finales de instalación, escalado y distribución en Windows deben documentarse antes de una publicación comercial definitiva.
+
+Revisar `LICENSE_DEMO.txt` y `THIRD_PARTY_NOTICES.txt` antes de distribuir como producto final.
